@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="checkout-form">
+    <h1>Checkout</h1>
+    <form id="checkout-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" required>
+      <label for="location">Location:</label>
+      <input type="text" id="location" required>
+      <label for="visa">Visa Card Number:</label>
+      <input type="text" id="visa" required>
+      <button type="submit">Submit Order</button>
+    </form>
+  </section>
+
+  <script>
+    document.getElementById('checkout-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Order placed successfully!');
+      localStorage.removeItem('cart'); // Clear cart after order
+      window.location.href = 'index.html';
+    });
+  </script>
+</body>
+</html>

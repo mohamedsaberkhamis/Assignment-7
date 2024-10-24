@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobile Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Nav bar with login status and view cart button -->
+  <nav>
+    <span id="login-status">Not logged in</span>
+    <a href="login.html">Login</a>
+    <button id="view-cart-btn">View Cart</button>
+  </nav>
+
+  <!-- Product Listing -->
+  <section class="store">
+    <h1>Available Mobiles</h1>
+    <div class="product-list">
+      <div class="product">
+        <h2>iPhone 14</h2>
+        <p>Price: $999</p>
+        <button class="buy-btn" data-name="iPhone 14" data-price="999">Add to Cart</button>
+      </div>
+      <div class="product">
+        <h2>Samsung Galaxy S23</h2>
+        <p>Price: $899</p>
+        <button class="buy-btn" data-name="Samsung Galaxy S23" data-price="899">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cart Popup Modal -->
+  <div id="cart-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>My Cart</h2>
+      <ul id="cart-items"></ul>
+      <p id="total-price">Total: $0</p>
+      <button id="checkout-btn" disabled>Buy Now</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
